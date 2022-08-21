@@ -1,7 +1,7 @@
 import React, {Component, useState} from "react";
 import '../styles/App.css';
 
-const relatives=['relativeListItem1', 'relativeListItem2', 'relativeListItem3', 'relativeListItem4', 'relativeListItem5', 'relativeListItem6']
+const relativeList=['relativeListItem1', 'relativeListItem2', 'relativeListItem3', 'relativeListItem4', 'relativeListItem5', 'relativeListItem6']
 
 class App extends Component {
     render() {
@@ -9,9 +9,9 @@ class App extends Component {
         return(
             <div id="main">
                {/* Do not remove the main div */}
-              <ol>
+              <ol key="relativeList">
                 {
-                  relatives.map(x => (
+                  relativeList.map(x => (
                     <li key={x}>{x}</li>
                   ))
                 }
